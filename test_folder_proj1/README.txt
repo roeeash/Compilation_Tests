@@ -32,6 +32,10 @@ B. This test will run test1 which comapres the outputs of the file "abcd moish 9
 
 If they're the same, the result is -1 and the tester wil print that they are the same. Otherwise, it'll print they are not the same.
 
+C. This test will run test1 which comapres the outputs of the file "abcd moish 9999 /** THIS IS A COMMENT */ //this is another comment int a := 42; int c = 347652;" to  output3.txt. NOTE: THIS FILE SHOULD RESULT IN AN ERROR!
+
+If they're the same, the result is -1 and the tester wil print that they are the same. Otherwise, it'll print they are not the same.
+
 ----
 
 Feel free to add more tests!
