@@ -313,7 +313,7 @@ static Scanner in = new Scanner(System.in);
 	if(passed_three)
 		System.out.println("Passed test three!");
 
-	if(passed_one && passed_two)
+	if(passed_one && passed_two && passed_three)
 		System.out.println("Passed all the tests! Well done!");
 	
 		}
