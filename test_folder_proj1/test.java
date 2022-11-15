@@ -130,13 +130,28 @@ static Scanner in = new Scanner(System.in);
         writer.close();
 	}
 
+
+
+	/** TEST3 **/ 
+	
+	//test 3
+	public static void test3(String root_user)  throws IOException{
+
+	String path = "/home/" + root_user+"/Desktop/compilation/ex1/input/Input.txt";
+	PrintWriter writer = new PrintWriter(path);
+	writer.print("");
+	writer.flush();
+	writer.write("abcd moish 9999 /** THIS IS A COMMENT */ //this is another comment int a := 42; int c = 347652;");                                                   
+                         writer.flush();  
+        writer.close();
+	}
 	
 
 
 
 	public static void main(String[]args){
 
-	boolean passed_one = false, passed_two = false;
+	boolean passed_one = false, passed_two = false, passed_three = false;
 
 
 	System.out.println("enter name of root user:");
@@ -167,7 +182,7 @@ static Scanner in = new Scanner(System.in);
 
 	try {
 		
-		Path path1 = Paths.get("/home/"+ root_user+"/Desktop/test_folder/output1.txt");
+		Path path1 = Paths.get("/home/"+ root_user+"/Desktop/Compilation_Tests/test_folder_proj1/output1.txt");
 		Path path2 = Paths.get("/home/"+ root_user+"/Desktop/compilation/ex1/output/OutputTokens.txt");
 		long diff = filesCompareByLine(path1,path2);
 		
@@ -220,7 +235,7 @@ static Scanner in = new Scanner(System.in);
 
 	try {
 		
-		Path path1 = Paths.get("/home/"+ root_user+"/Desktop/test_folder/output2.txt");
+		Path path1 = Paths.get("/home/"+ root_user+"/Desktop/Compilation_Tests/test_folder_proj1/output2.txt");
 		Path path2 = Paths.get("/home/"+ root_user+"/Desktop/compilation/ex1/output/OutputTokens.txt");
 		long diff = filesCompareByLine(path1,path2);
 		
@@ -237,6 +252,57 @@ static Scanner in = new Scanner(System.in);
 		System.out.println("Could not compare files");
 	}
 
+
+	/** Sleep**/
+
+	try{
+
+	TimeUnit.SECONDS.sleep(1);
+	}
+	
+	catch(InterruptedException e){
+	}
+
+
+
+	/** TRYING TEST3 **/
+	//1.TEST
+	try {
+		test3(root_user);
+	
+	}
+
+	catch (IOException e){
+	}
+
+	//2. RUN MAKE COMMAND
+
+	
+	make(path);
+	
+
+	//3. COMPARE TEST 2
+
+	try {
+		
+		Path path1 = Paths.get("/home/"+ root_user+"/Desktop/Compilation_Tests/test_folder_proj1/output3.txt");
+		Path path2 = Paths.get("/home/"+ root_user+"/Desktop/compilation/ex1/output/OutputTokens.txt");
+		long diff = filesCompareByLine(path1,path2);
+		
+		if(diff == -1){
+			System.out.println("Files match");
+			passed_three = true;
+		}
+		else
+			System.out.println("Files do not match, difference at line  "+diff);
+	
+	}
+
+	catch (IOException e){
+		System.out.println("Could not compare files");
+	}
+
+
 	
 
 	
@@ -244,6 +310,8 @@ static Scanner in = new Scanner(System.in);
 		System.out.println("Passed test one!");
 	if(passed_two)
 		System.out.println("Passed test two!");
+	if(passed_three)
+		System.out.println("Passed test three!");
 
 	if(passed_one && passed_two)
 		System.out.println("Passed all the tests! Well done!");
