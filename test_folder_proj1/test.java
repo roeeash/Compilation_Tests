@@ -13,6 +13,7 @@ public class test{
 
 static Scanner in = new Scanner(System.in);
 
+
 	// run make command
 
     public static void runCommand(File whereToRun, String command) throws Exception {
@@ -54,6 +55,21 @@ static Scanner in = new Scanner(System.in);
         }
     }
 
+
+	//run make command
+	public static void make(String path){
+	try {
+		File f = new File(path);
+		runCommand(f,"make");
+		
+	}
+		
+	catch(Exception e){
+	System.out.println("Make was unsuccessful");
+	
+	}
+	}
+
 	// compare line by line 
 
 	public static long filesCompareByLine(Path path1, Path path2) throws IOException {
@@ -81,7 +97,11 @@ static Scanner in = new Scanner(System.in);
 
 	/**** TESTS *****/
 
- 
+
+	
+	/** TEST1 **/ 
+	
+	//test 1
 	public static void test1(String root_user)  throws IOException{
 
 	String path = "/home/" + root_user+"/Desktop/compilation/ex1/input/Input.txt";
@@ -93,14 +113,39 @@ static Scanner in = new Scanner(System.in);
         writer.close();
 	}
 
+	
+
+	
+	/** TEST2 **/ 
+	
+	//test 2
+	public static void test2(String root_user)  throws IOException{
+
+	String path = "/home/" + root_user+"/Desktop/compilation/ex1/input/Input.txt";
+	PrintWriter writer = new PrintWriter(path);
+	writer.print("");
+	writer.flush();
+	writer.write("abcd moish 9999 /** THIS IS A COMMENT */ //this is another comment int a := 42; ");                                                   
+                         writer.flush();  
+        writer.close();
+	}
+
+	
+
 
 
 	public static void main(String[]args){
+
+	boolean passed_one = false, passed_two = false;
+
 
 	System.out.println("enter name of root user:");
 
 	String root_user = in.next();
 
+
+	/** TRYING TEST1 **/
+	//1.TEST
 	try {
 		test1(root_user);
 	
@@ -109,31 +154,27 @@ static Scanner in = new Scanner(System.in);
 	catch (IOException e){
 	}
 
-	//run make command 
+	//2. RUN MAKE COMMAND
 
 	System.out.println("enter path for make command:");
 
 	String path = in.next();
-
-	try {
-		File f = new File(path);
-		runCommand(f,"make");
-		
-	}
-		
-	catch(Exception e){
-	System.out.println("Make was unsuccessful");
 	
-	}
+	make(path);
+	
+
+	//3. COMPARE TEST 1 
 
 	try {
 		
-		Path path1 = Paths.get("/home/roee/Desktop/output.txt");
-		Path path2 = Paths.get("/home/roee/Desktop/compilation/ex1/output/OutputTokens.txt");
+		Path path1 = Paths.get("/home/"+ root_user+"/Desktop/test_folder/output1.txt");
+		Path path2 = Paths.get("/home/"+ root_user+"/Desktop/compilation/ex1/output/OutputTokens.txt");
 		long diff = filesCompareByLine(path1,path2);
 		
-		if(diff == -1)
+		if(diff == -1){
 			System.out.println("Files match");
+			passed_one = true;
+		}
 		else
 			System.out.println("Files do not match, difference at line  "+diff);
 	
@@ -143,7 +184,71 @@ static Scanner in = new Scanner(System.in);
 		System.out.println("Could not compare files");
 	}
 
+	/** Sleep**/
+
+	try{
+
+	TimeUnit.SECONDS.sleep(1);
 	}
+	
+	catch(InterruptedException e){
+	}
+
+
+
+
+
+
+
+	/** TRYING TEST2 **/
+	//1.TEST
+	try {
+		test2(root_user);
+	
+	}
+
+	catch (IOException e){
+	}
+
+	//2. RUN MAKE COMMAND
+
+	
+	make(path);
+	
+
+	//3. COMPARE TEST 2
+
+	try {
+		
+		Path path1 = Paths.get("/home/"+ root_user+"/Desktop/test_folder/output2.txt");
+		Path path2 = Paths.get("/home/"+ root_user+"/Desktop/compilation/ex1/output/OutputTokens.txt");
+		long diff = filesCompareByLine(path1,path2);
+		
+		if(diff == -1){
+			System.out.println("Files match");
+			passed_two = true;
+		}
+		else
+			System.out.println("Files do not match, difference at line  "+diff);
+	
+	}
+
+	catch (IOException e){
+		System.out.println("Could not compare files");
+	}
+
+	
+
+	
+	if(passed_one)
+		System.out.println("Passed test one!");
+	if(passed_two)
+		System.out.println("Passed test two!");
+
+	if(passed_one && passed_two)
+		System.out.println("Passed all the tests! Well done!");
+	
+		}
 
 }
 
