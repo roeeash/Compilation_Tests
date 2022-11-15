@@ -95,20 +95,39 @@ static Scanner in = new Scanner(System.in);
 }
 
 
+
+
+
+
 	/**** TESTS *****/
 
 
 	
-	/** TEST1 **/ 
+	/** GENERIC TEST FUNCTION **/ 
 	
-	//test 1
-	public static void test1(String root_user)  throws IOException{
+	
+	public static void test_generic(String root_user,String input_file)  throws IOException{
 
 	String path = "/home/" + root_user+"/Desktop/compilation/ex1/input/Input.txt";
+	FileReader fr = new FileReader(input_file);
 	PrintWriter writer = new PrintWriter(path);
 	writer.print("");
 	writer.flush();
-	writer.write("abcd moish 9999");                                                   
+ 	// whole content of file is to be stored
+            String str = "";
+ 
+            int i;
+ 
+           
+            while ((i = fr.read()) != -1) {
+ 
+                str += (char)i;
+            }
+ 
+ 
+            // Writing above string data to
+            // FileWriter object
+	writer.write(str);                                                   
                          writer.flush();  
         writer.close();
 	}
@@ -116,35 +135,6 @@ static Scanner in = new Scanner(System.in);
 	
 
 	
-	/** TEST2 **/ 
-	
-	//test 2
-	public static void test2(String root_user)  throws IOException{
-
-	String path = "/home/" + root_user+"/Desktop/compilation/ex1/input/Input.txt";
-	PrintWriter writer = new PrintWriter(path);
-	writer.print("");
-	writer.flush();
-	writer.write("abcd moish 9999 /** THIS IS A COMMENT */ //this is another comment int a := 42; ");                                                   
-                         writer.flush();  
-        writer.close();
-	}
-
-
-
-	/** TEST3 **/ 
-	
-	//test 3
-	public static void test3(String root_user)  throws IOException{
-
-	String path = "/home/" + root_user+"/Desktop/compilation/ex1/input/Input.txt";
-	PrintWriter writer = new PrintWriter(path);
-	writer.print("");
-	writer.flush();
-	writer.write("abcd moish 9999 /** THIS IS A COMMENT */ //this is another comment int a := 42; int c = 347652;");                                                   
-                         writer.flush();  
-        writer.close();
-	}
 	
 
 
@@ -162,7 +152,7 @@ static Scanner in = new Scanner(System.in);
 	/** TRYING TEST1 **/
 	//1.TEST
 	try {
-		test1(root_user);
+		test_generic(root_user,"./input/input1.txt");
 	
 	}
 
@@ -182,7 +172,7 @@ static Scanner in = new Scanner(System.in);
 
 	try {
 		
-		Path path1 = Paths.get("/home/"+ root_user+"/Desktop/Compilation_Tests/test_folder_proj1/output1.txt");
+		Path path1 = Paths.get("/home/"+ root_user+"/Desktop/Compilation_Tests/test_folder_proj1/output/output1.txt");
 		Path path2 = Paths.get("/home/"+ root_user+"/Desktop/compilation/ex1/output/OutputTokens.txt");
 		long diff = filesCompareByLine(path1,path2);
 		
@@ -218,7 +208,7 @@ static Scanner in = new Scanner(System.in);
 	/** TRYING TEST2 **/
 	//1.TEST
 	try {
-		test2(root_user);
+		test_generic(root_user,"./input/input2.txt");
 	
 	}
 
@@ -235,7 +225,7 @@ static Scanner in = new Scanner(System.in);
 
 	try {
 		
-		Path path1 = Paths.get("/home/"+ root_user+"/Desktop/Compilation_Tests/test_folder_proj1/output2.txt");
+		Path path1 = Paths.get("/home/"+ root_user+"/Desktop/Compilation_Tests/test_folder_proj1/output/output2.txt");
 		Path path2 = Paths.get("/home/"+ root_user+"/Desktop/compilation/ex1/output/OutputTokens.txt");
 		long diff = filesCompareByLine(path1,path2);
 		
@@ -268,8 +258,7 @@ static Scanner in = new Scanner(System.in);
 	/** TRYING TEST3 **/
 	//1.TEST
 	try {
-		test3(root_user);
-	
+		test_generic(root_user,"./input/input3.txt");
 	}
 
 	catch (IOException e){
@@ -285,7 +274,7 @@ static Scanner in = new Scanner(System.in);
 
 	try {
 		
-		Path path1 = Paths.get("/home/"+ root_user+"/Desktop/Compilation_Tests/test_folder_proj1/output3.txt");
+		Path path1 = Paths.get("/home/"+ root_user+"/Desktop/Compilation_Tests/test_folder_proj1/output/output3.txt");
 		Path path2 = Paths.get("/home/"+ root_user+"/Desktop/compilation/ex1/output/OutputTokens.txt");
 		long diff = filesCompareByLine(path1,path2);
 		

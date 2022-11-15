@@ -1,0 +1,1 @@
+abcd moish 9999 /** THIS IS A COMMENT */ //this is another comment int a := 42; int c = 347652;
