@@ -141,18 +141,24 @@ static Scanner in = new Scanner(System.in);
 
 	public static void main(String[]args){
 
-	boolean passed_one = false, passed_two = false, passed_three = false;
+	int passed_count = 0;
 
 
 	System.out.println("enter name of root user:");
 
 	String root_user = in.next();
 
+	System.out.println("enter path for make command:");
+
+	String path = in.next();
+
+	for(int i =1; i<=3; i++) {
+
 
 	/** TRYING TEST1 **/
 	//1.TEST
 	try {
-		test_generic(root_user,"./input/input1.txt");
+		test_generic(root_user,"./input/input"+i+".txt");
 	
 	}
 
@@ -161,9 +167,7 @@ static Scanner in = new Scanner(System.in);
 
 	//2. RUN MAKE COMMAND
 
-	System.out.println("enter path for make command:");
-
-	String path = in.next();
+	
 	
 	make(path);
 	
@@ -172,13 +176,14 @@ static Scanner in = new Scanner(System.in);
 
 	try {
 		
-		Path path1 = Paths.get("/home/"+ root_user+"/Desktop/Compilation_Tests/test_folder_proj1/output/output1.txt");
+		Path path1 = Paths.get("/home/"+ root_user+"/Desktop/Compilation_Tests/test_folder_proj1/output/output"+i+".txt");
 		Path path2 = Paths.get("/home/"+ root_user+"/Desktop/compilation/ex1/output/OutputTokens.txt");
 		long diff = filesCompareByLine(path1,path2);
 		
 		if(diff == -1){
 			System.out.println("Files match");
-			passed_one = true;
+			passed_count++;
+			System.out.println("Passed test " +i+"!");
 		}
 		else
 			System.out.println("Files do not match, difference at line  "+diff);
@@ -199,113 +204,18 @@ static Scanner in = new Scanner(System.in);
 	catch(InterruptedException e){
 	}
 
+	}//end for
 
 
 
-
-
-
-	/** TRYING TEST2 **/
-	//1.TEST
-	try {
-		test_generic(root_user,"./input/input2.txt");
-	
-	}
-
-	catch (IOException e){
-	}
-
-	//2. RUN MAKE COMMAND
-
-	
-	make(path);
-	
-
-	//3. COMPARE TEST 2
-
-	try {
-		
-		Path path1 = Paths.get("/home/"+ root_user+"/Desktop/Compilation_Tests/test_folder_proj1/output/output2.txt");
-		Path path2 = Paths.get("/home/"+ root_user+"/Desktop/compilation/ex1/output/OutputTokens.txt");
-		long diff = filesCompareByLine(path1,path2);
-		
-		if(diff == -1){
-			System.out.println("Files match");
-			passed_two = true;
-		}
-		else
-			System.out.println("Files do not match, difference at line  "+diff);
-	
-	}
-
-	catch (IOException e){
-		System.out.println("Could not compare files");
-	}
-
-
-	/** Sleep**/
-
-	try{
-
-	TimeUnit.SECONDS.sleep(1);
-	}
-	
-	catch(InterruptedException e){
-	}
-
-
-
-	/** TRYING TEST3 **/
-	//1.TEST
-	try {
-		test_generic(root_user,"./input/input3.txt");
-	}
-
-	catch (IOException e){
-	}
-
-	//2. RUN MAKE COMMAND
-
-	
-	make(path);
-	
-
-	//3. COMPARE TEST 2
-
-	try {
-		
-		Path path1 = Paths.get("/home/"+ root_user+"/Desktop/Compilation_Tests/test_folder_proj1/output/output3.txt");
-		Path path2 = Paths.get("/home/"+ root_user+"/Desktop/compilation/ex1/output/OutputTokens.txt");
-		long diff = filesCompareByLine(path1,path2);
-		
-		if(diff == -1){
-			System.out.println("Files match");
-			passed_three = true;
-		}
-		else
-			System.out.println("Files do not match, difference at line  "+diff);
-	
-	}
-
-	catch (IOException e){
-		System.out.println("Could not compare files");
-	}
-
+	System.out.println("Passed tests: "+passed_count+ " out of 3");
 
 	
 
-	
-	if(passed_one)
-		System.out.println("Passed test one!");
-	if(passed_two)
-		System.out.println("Passed test two!");
-	if(passed_three)
-		System.out.println("Passed test three!");
-
-	if(passed_one && passed_two && passed_three)
+	if(passed_count == 3)
 		System.out.println("Passed all the tests! Well done!");
 	
-		}
+	}// end- main
 
-}
+}//end- class
 
