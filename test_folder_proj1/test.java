@@ -152,7 +152,7 @@ static Scanner in = new Scanner(System.in);
 
 	String path = in.next();
 
-	for(int i =1; i<=4; i++) {
+	for(int i =1; i<=35; i++) {
 
 
 	/** TRYING TEST1 **/
@@ -208,11 +208,11 @@ static Scanner in = new Scanner(System.in);
 
 
 
-	System.out.println("Passed tests: "+passed_count+ " out of 4");
+	System.out.println("Passed tests: "+passed_count+ " out of 35");
 
 	
 
-	if(passed_count == 4)
+	if(passed_count == 35)
 		System.out.println("Passed all the tests! Well done!");
 	
 	}// end- main
