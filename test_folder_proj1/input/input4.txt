@@ -1,0 +1,1 @@
+abcd moish 9999 /*a THIS IS A COMMENT Error  //this is another comment int a := 42; int c = 347652;
