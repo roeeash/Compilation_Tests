@@ -11,11 +11,13 @@ To use tester for project 1 :
 
 ![image](https://github.com/roeeash/Compilation_Tests/blob/main/instructions.png?raw=true)
 
-2. clone the project cd test_folder_proj1
+2. clone the project Compilaton_Tests
 
-3. Enter cd test_folder_proj1, the press enter
+3. cd test_folder_proj1
 
-4. read https://www.github.com/roeeash/Compilation_Tests/blob/main/test_folder_proj1/README.txt fo futher instructions.
+4. Enter cd test_folder_proj1, the press enter
+
+5. read https://www.github.com/roeeash/Compilation_Tests/blob/main/test_folder_proj1/README.txt fo futher instructions.
 
 
 
