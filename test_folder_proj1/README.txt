@@ -28,7 +28,7 @@ To use this file:
 
 The tests :
 
-This tester conatins 65 different tests cases, if a case does not pass, 
+This tester conatins 65 different test cases, if a case does not pass, 
 
 it tells you which line caused the error, so you can correct it!
 
