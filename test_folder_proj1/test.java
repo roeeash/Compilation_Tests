@@ -106,11 +106,11 @@ static Scanner in = new Scanner(System.in);
 	/** GENERIC TEST FUNCTION **/ 
 	
 	
-	public static void test_generic(String root_user,String input_file)  throws IOException{
+	public static void test_generic(String parent_folder,String input_file)  throws IOException{
 
-	String path = "/home/" + root_user+"/Desktop/compilation/ex1/input/Input.txt";
+	String path_for_write = parent_folder+"/ex1/input/Input.txt";
 	FileReader fr = new FileReader(input_file);
-	PrintWriter writer = new PrintWriter(path);
+	PrintWriter writer = new PrintWriter(path_for_write);
 	writer.print("");
 	writer.flush();
  	// whole content of file is to be stored
@@ -144,13 +144,11 @@ static Scanner in = new Scanner(System.in);
 	int passed_count = 0;
 
 
-	System.out.println("enter name of root user:");
+	System.out.println("enter name of parent folder:");
 
-	String root_user = in.next();
+	String parent_folder = in.next();
 
-	System.out.println("enter path for make command:");
-
-	String path = in.next();
+	
 
 	for(int i =1; i<=65; i++) {
 
@@ -158,7 +156,7 @@ static Scanner in = new Scanner(System.in);
 	/** TRYING TEST1 **/
 	//1.TEST
 	try {
-		test_generic(root_user,"./input/input"+i+".txt");
+		test_generic(parent_folder,"./input/input"+i+".txt");
 	
 	}
 
@@ -169,15 +167,15 @@ static Scanner in = new Scanner(System.in);
 
 	
 	
-	make(path);
+	make(parent_folder+"/ex1/");
 	
 
 	//3. COMPARE TEST 1 
 
 	try {
 		
-		Path path1 = Paths.get("/home/"+ root_user+"/Desktop/Compilation_Tests/test_folder_proj1/output/output"+i+".txt");
-		Path path2 = Paths.get("/home/"+ root_user+"/Desktop/compilation/ex1/output/OutputTokens.txt");
+		Path path1 = Paths.get(parent_folder+"/Compilation_Tests/test_folder_proj1/output/output"+i+".txt");
+		Path path2 = Paths.get(parent_folder+"/ex1/output/OutputTokens.txt");
 		long diff = filesCompareByLine(path1,path2);
 		
 		if(diff == -1){
