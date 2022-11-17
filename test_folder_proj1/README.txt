@@ -20,7 +20,8 @@ To use this file:
 
 3. Then, write "java test", and press enter
 
-4. Enter the shared parent folder for ex1 and Compilation_Tests, then press enter
+4. Enter the full path of the shared parent folder for ex1 and Compilation_Tests, then press enter
+(NOTE: IT IS IMPORTANT THAT IT IS THE FULL PATH OF THE PARENT FOLDER!)
 
 
 
