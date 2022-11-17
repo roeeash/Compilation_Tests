@@ -1,4 +1,4 @@
-Welcome to the genius tester file made by Roee Ashkenazi the great, first of his name
+Welcome to tester file made by Roee Ashkenazi
 
 
 VERY IMPORTANT: Before using the files:
@@ -33,5 +33,6 @@ This tester conatins 65 different tests cases, if a case does not pass,
 it tells you which line caused the error, so you can correct it!
 
 ----
+A VERY SPECIAL THANK YOU TO ROTEM ASSA for the test cases!!!
 
 Feel free to add more tests!
