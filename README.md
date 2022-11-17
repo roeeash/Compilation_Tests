@@ -13,7 +13,7 @@ To use tester for project 1 :
 
 2. clone the project Compilaton_Tests
 
-3 Enter cd test_folder_proj1, the press enter
+3. Enter cd test_folder_proj1, the press enter
 
 4. read https://www.github.com/roeeash/Compilation_Tests/blob/main/test_folder_proj1/README.txt fo futher instructions.
 
