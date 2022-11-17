@@ -20,9 +20,7 @@ To use this file:
 
 3. Then, write "java test", and press enter
 
-4. Enter your root user name , and press enter
-
-5. Enter the path for the make command (which is /home/your-root-username/Desktop/compilation/ex1), then press enter
+4. Enter the shared parent folder for ex1 and Compilation_Tests, then press enter
 
 
 
