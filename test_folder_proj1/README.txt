@@ -1,13 +1,11 @@
 Welcome to tester file made by Roee Ashkenazi
 
 
-VERY IMPORTANT: Before using the files:
+VERY IMPORTANT: Before using the file in NOVA:
 
-1. Make sure you know the root username
+1. Clone Compilation_Tests AND your ex1 folder
 
-2. Make sure the ex1 folder is in the following directory
-
-/home/your-root-username/Desktop/compilation/ex1
+2. Copy them to the same parent folder in nova
 
 
 
