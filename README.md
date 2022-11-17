@@ -10,4 +10,4 @@ To use tester for project 1 :
 
 2. cd test_folder_proj1
 
-3. read README.txt fo futher instructions.
+3. read [https://github.com/roeeash/Compilation_Tests/blob/main/test_folder_proj1/README.txt](doc:README.txt) fo futher instructions.
