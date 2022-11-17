@@ -9,6 +9,8 @@ To use tester for project 1 :
 
 1. Make sure you're in the same parent folder as your ex1, like so
 
+![image](https://github.com/roeeash/Compilation_Tests/blob/main/instructions.jpg?raw=true)
+
 2. clone the project cd test_folder_proj1
 
 3. Enter cd test_folder_proj1, the press enter
