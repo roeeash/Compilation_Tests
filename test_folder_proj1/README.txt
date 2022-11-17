@@ -1,10 +1,16 @@
 Welcome to the genius tester file made by Roee Ashkenazi the great, first of his name
 
-Before using the file:
 
-Make sure the ex1 folder is in the following directory
+VERY IMPORTANT: Before using the files:
+
+1. Make sure you know the root username
+
+2. Make sure the ex1 folder is in the following directory
 
 /home/your-root-username/Desktop/compilation/ex1
+
+
+
 
 To use this file:
 
@@ -16,25 +22,15 @@ To use this file:
 
 4. Enter your root user name , and press enter
 
-5. Enter the path for the make command (which is /home/your-root-username/Desktop/compilation/ex1)
+5. Enter the path for the make command (which is /home/your-root-username/Desktop/compilation/ex1), then press enter
 
-6. Press enter
 
-7. 
 
 The tests :
 
-A. This test will run test1 which comapres the outputs of the file "abcd moish 9999" to output1.txt.
+This tester conatins 65 different tests cases, if a case does not pass, 
 
-If they're the same, the result is -1 and the tester wil print that they are the same. Otherwise, it'll print they are not the same.
-
-B. This test will run test1 which comapres the outputs of the file "abcd moish 9999 /** THIS IS A COMMENT */ //this is another comment int a := 42;" to  output2.txt.
-
-If they're the same, the result is -1 and the tester wil print that they are the same. Otherwise, it'll print they are not the same.
-
-C. This test will run test1 which comapres the outputs of the file "abcd moish 9999 /** THIS IS A COMMENT */ //this is another comment int a := 42; int c = 347652;" to  output3.txt. NOTE: THIS FILE SHOULD RESULT IN AN ERROR!
-
-If they're the same, the result is -1 and the tester wil print that they are the same. Otherwise, it'll print they are not the same.
+it tells you which line caused the error, so you can correct it!
 
 ----
 
