@@ -10,6 +10,6 @@ To use tester for project 1 :
 
 2. cd test_folder_proj1
 
-3. read [test_folder_proj1/README.txt][doc:README.txt] fo futher instructions.
+3. read [doc:test_folder_proj1/README.txt] fo futher instructions.
 
 
