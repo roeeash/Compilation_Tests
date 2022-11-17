@@ -1,0 +1,3 @@
+abcd moish 9999 
+/* THIS IS A COMMENT */
+//this is a comment and the following equal sign is not suppoed to be here = 
