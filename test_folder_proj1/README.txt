@@ -1,12 +1,9 @@
 Welcome to tester file made by Roee Ashkenazi
 
 
-VERY IMPORTANT: Before using the file in NOVA:
+To run the tester on Nova:
 
-1. Clone Compilation_Tests AND your ex1 folder
-
-2. Copy them to the same parent folder in nova
-
+1. Copy the ex1 folder and the Compilation_Tests folder using WinSCP to your nova folder 
 
 
 
@@ -18,8 +15,7 @@ To use this file:
 
 3. Then, write "java test", and press enter
 
-4. Enter the full path of the shared parent folder for ex1 and Compilation_Tests, then press enter
-(NOTE: IT IS IMPORTANT THAT IT IS THE FULL PATH OF THE PARENT FOLDER!)
+4. The tester will automatically run withouht you having to do anything! Sit back, relax and watch it work. Good Luck!
 
 
 
