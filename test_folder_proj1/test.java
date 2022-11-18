@@ -14,7 +14,7 @@ public class test{
 static Scanner in = new Scanner(System.in);
 
 
-	// run make command
+	// run commands in shell
 
     public static void runCommand(File whereToRun, String command) throws Exception {
         System.out.println("Running in: " + whereToRun);
@@ -57,15 +57,15 @@ static Scanner in = new Scanner(System.in);
 
 
 	//run make command
-	public static void make(String path){
+	public static void runShellCommand(String path, String command){
 	try {
 		File f = new File(path);
-		runCommand(f,"make");
+		runCommand(f,command);
 		
 	}
 		
 	catch(Exception e){
-	System.out.println("Make was unsuccessful");
+	System.out.println("Command"+command+" was unsuccessful");
 	
 	}
 	}
@@ -144,9 +144,6 @@ static Scanner in = new Scanner(System.in);
 	int passed_count = 0;
 
 
-	System.out.println("enter name of parent folder:");
-
-	String parent_folder = in.next();
 
 	
 
@@ -156,7 +153,7 @@ static Scanner in = new Scanner(System.in);
 	/** TRYING TEST1 **/
 	//1.TEST
 	try {
-		test_generic(parent_folder,"./input/input"+i+".txt");
+		test_generic("../../","./input/input"+i+".txt");
 	
 	}
 
@@ -167,15 +164,17 @@ static Scanner in = new Scanner(System.in);
 
 	
 	
-	make(parent_folder+"/ex1/");
+	//run jar file
+
+	runShellCommand("../../ex1/", "make");
 	
 
 	//3. COMPARE TEST 1 
 
 	try {
 		
-		Path path1 = Paths.get(parent_folder+"/Compilation_Tests/test_folder_proj1/output/output"+i+".txt");
-		Path path2 = Paths.get(parent_folder+"/ex1/output/OutputTokens.txt");
+		Path path1 = Paths.get("../../Compilation_Tests/test_folder_proj1/output/output"+i+".txt");
+		Path path2 = Paths.get("../../ex1/output/OutputTokens.txt");
 		long diff = filesCompareByLine(path1,path2);
 		
 		if(diff == -1){
@@ -216,4 +215,3 @@ static Scanner in = new Scanner(System.in);
 	}// end- main
 
 }//end- class
-
