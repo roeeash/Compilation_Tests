@@ -19,6 +19,8 @@ To use this file:
 
 5. If an image opens, like so: 
 
+![image](https://github.com/roeeash/Compilation_Tests/blob/main/close_image.png?raw=true)
+
 Make sure to close it.
 
 
