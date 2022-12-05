@@ -147,7 +147,7 @@ static Scanner in = new Scanner(System.in);
 
 	
 
-	for(int i =1; i<=4; i++) {
+	for(int i =1; i<=7; i++) {
 
 
 	/** TRYING TEST1 **/
@@ -205,11 +205,11 @@ static Scanner in = new Scanner(System.in);
 
 
 
-	System.out.println("Passed tests: "+passed_count+ " out of 4");
+	System.out.println("Passed tests: "+passed_count+ " out of 7");
 
 	
 
-	if(passed_count == 4)
+	if(passed_count == 7)
 		System.out.println("Passed all the tests! Well done!");
 	
 	}// end- main
