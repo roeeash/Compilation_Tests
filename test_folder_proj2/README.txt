@@ -23,6 +23,9 @@ To use this file:
 
 Make sure to close it.
 
+6. After completeing the tester, an output file with your results will appear under Compilation_Tests/most_recent_output.txt, like so:
+![image](https://github.com/roeeash/Compilation_Tests/blob/main/images/most_recent_output.png?raw=true)
+
 
 
 The tests :
