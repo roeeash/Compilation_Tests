@@ -28,7 +28,7 @@ To use tester for project 2 :
 
 2. clone the project Compilaton_Tests
 
-3. Type cd test_folder_proj1, the press enter
+3. Type cd test_folder_proj2, the press enter
 
 4. read https://www.github.com/roeeash/Compilation_Tests/blob/main/test_folder_proj2/README.txt for futher instructions.
 
