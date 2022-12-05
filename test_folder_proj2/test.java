@@ -141,13 +141,14 @@ static Scanner in = new Scanner(System.in);
 
 	public static void main(String[]args){
 
-	int passed_count = 0;
-
-
-
+	int parse_passed_count = 0;
+	int other_passed_count = 0;
+	try{
+	PrintWriter output_writer = new PrintWriter("../../Compilation_Tests/test_folder_proj2/most_recent_output.txt");
+	
 	
 
-	for(int i =1; i<=7; i++) {
+	for(int i =1; i<=8; i++) {
 
 
 	/** TRYING TEST1 **/
@@ -179,16 +180,21 @@ static Scanner in = new Scanner(System.in);
 		
 		if(diff == -1){
 			System.out.println("Files match");
-			passed_count++;
+			if(i<=7) parse_passed_count++;
+			else other_passed_count++;
 			System.out.println("Passed test " +i+"!");
+			output_writer.write("Passed test " +i+"!\n");
 		}
-		else
+		else{
 			System.out.println("Files do not match, difference at line  "+diff);
+			output_writer.write("Files do not match, difference at line  "+diff+" in test " +i+"!\n");
+		}	
 	
 	}
 
 	catch (IOException e){
 		System.out.println("Could not compare files");
+		output_writer.write("Could not compare files in test" + i+"\n");
 	}
 
 	/** Sleep**/
@@ -205,12 +211,27 @@ static Scanner in = new Scanner(System.in);
 
 
 
-	System.out.println("Passed tests: "+passed_count+ " out of 7");
+	System.out.println("Passed tests for Parse Errors: "+parse_passed_count+ " out of 7");
+	output_writer.write("Passed tests for Parse Errors: "+parse_passed_count+ " out of 7\n");
+
+	System.out.println("Passed tests for Other Errors: "+other_passed_count+ " out of 1");
+	output_writer.write("Passed tests for Other Errors: "+other_passed_count+ " out of 1\n");
 
 	
 
-	if(passed_count == 7)
+	if(parse_passed_count + other_passed_count == 8)
 		System.out.println("Passed all the tests! Well done!");
+		output_writer.write("Passed all the tests! Well done!\n");
+
+
+	output_writer.flush();  
+        output_writer.close();
+	}
+
+	catch (IOException e){
+	}
+
+	
 	
 	}// end- main
 
