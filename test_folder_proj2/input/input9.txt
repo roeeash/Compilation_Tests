@@ -1,0 +1,3 @@
+//this is a comment 
+int a := 42; int c := 34652;
+/*a THIS IS A COMMENT Error  
