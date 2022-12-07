@@ -1,11 +1,11 @@
 array GADI = int [];
 array AVI = Avi [];
-array AVI = int [];
+array AVI = int [);
 
 class Project {
 
 void func(int dave){
-Gidi := new int[5]
+Gidi := new int[5];
 Yossi(4,4);
 return 3+3;
 }

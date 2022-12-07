@@ -148,7 +148,7 @@ static Scanner in = new Scanner(System.in);
 	
 	
 
-	for(int i =1; i<=10; i++) {
+	for(int i =1; i<=16; i++) {
 
 
 	/** TRYING TEST1 **/
@@ -180,7 +180,7 @@ static Scanner in = new Scanner(System.in);
 		
 		if(diff == -1){
 			System.out.println("Files match");
-			if(i<=8) parse_passed_count++;
+			if(i<=14) parse_passed_count++;
 			else other_passed_count++;
 			System.out.println("Passed test " +i+"!");
 			output_writer.write("Passed test " +i+"!\n");
@@ -211,17 +211,18 @@ static Scanner in = new Scanner(System.in);
 
 
 
-	System.out.println("Passed tests for Parse Errors: "+parse_passed_count+ " out of 8");
-	output_writer.write("Passed tests for Parse Errors: "+parse_passed_count+ " out of 8\n");
+	System.out.println("Passed tests for Parse Errors: "+parse_passed_count+ " out of 14");
+	output_writer.write("Passed tests for Parse Errors: "+parse_passed_count+ " out of 14\n");
 
 	System.out.println("Passed tests for Other Errors: "+other_passed_count+ " out of 2");
 	output_writer.write("Passed tests for Other Errors: "+other_passed_count+ " out of 2\n");
 
 	
 
-	if(parse_passed_count + other_passed_count == 10)
+	if(parse_passed_count + other_passed_count == 16){
 		System.out.println("Passed all the tests! Well done!");
 		output_writer.write("Passed all the tests! Well done!\n");
+	}
 
 
 	output_writer.flush();  

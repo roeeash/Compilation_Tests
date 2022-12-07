@@ -5,7 +5,7 @@ array AVI = int [];
 class Project {
 
 void func(int dave){
-Gidi := new int[5]
+Gidi := "page";
 Yossi(4,4);
 return 3+3;
 }

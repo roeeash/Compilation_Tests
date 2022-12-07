@@ -8,6 +8,12 @@ Passed test 7!
 Passed test 8!
 Passed test 9!
 Passed test 10!
-Passed tests for Parse Errors: 8 out of 8
+Passed test 11!
+Passed test 12!
+Passed test 13!
+Passed test 14!
+Passed test 15!
+Passed test 16!
+Passed tests for Parse Errors: 14 out of 14
 Passed tests for Other Errors: 2 out of 2
 Passed all the tests! Well done!
