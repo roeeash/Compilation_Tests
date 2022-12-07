@@ -143,8 +143,8 @@ static Scanner in = new Scanner(System.in);
 	//variables
 	int parsePassedCount = 0;
 	int otherPassedCount = 0;
-	int parseTests = 17;
-	int otherTests = 3;
+	int parseTests = 15;
+	int otherTests = 5;
 	int testNum = 20;
 
 	try{

@@ -18,6 +18,6 @@ Passed test 17!
 Passed test 18!
 Passed test 19!
 Passed test 20!
-Passed tests for Parse Errors: 17 out of 17
-Passed tests for Other Errors: 3 out of 3
+Passed tests for Parse Errors: 15 out of 15
+Passed tests for Other Errors: 5 out of 5
 Passed all the tests! Well done!
