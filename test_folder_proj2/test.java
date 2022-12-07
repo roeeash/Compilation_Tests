@@ -143,9 +143,9 @@ static Scanner in = new Scanner(System.in);
 	//variables
 	int parsePassedCount = 0;
 	int otherPassedCount = 0;
-	int parseTests = 15;
-	int otherTests = 5;
-	int testNum = 20;
+	int parseTests = 19;
+	int otherTests = 3;
+	int testNum = 22;
 
 	try{
 	PrintWriter output_writer = new PrintWriter("../../Compilation_Tests/test_folder_proj2/most_recent_output.txt");
@@ -215,11 +215,11 @@ static Scanner in = new Scanner(System.in);
 
 
 
-	System.out.println("Passed tests for Parse Errors: "+parsePassedCount+ " out of "+parseTests);
-	output_writer.write("Passed tests for Parse Errors: "+parsePassedCount+ " out of "+parseTests +"\n");
+	System.out.println("Passed tests for Parse related issues: "+parsePassedCount+ " out of "+parseTests);
+	output_writer.write("Passed tests for Parse related issues: "+parsePassedCount+ " out of "+parseTests +"\n");
 
-	System.out.println("Passed tests for Other Errors: "+otherPassedCount+ " out of "+otherTests);
-	output_writer.write("Passed tests for Other Errors: "+otherPassedCount+  " out of "+otherTests +"\n");
+	System.out.println("Passed tests for Other issues: "+otherPassedCount+ " out of "+otherTests);
+	output_writer.write("Passed tests for Other issues: "+otherPassedCount+  " out of "+otherTests +"\n");
 
 	
 
