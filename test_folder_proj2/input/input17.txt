@@ -1,3 +1,13 @@
-array AVI = int []; 
-/* THIS IS A COMMENT */
-/*this is a comment and the following equal sign is not suppoed to be here = 
+array GADI = int [];
+array AVI = Avi [];
+int AVI := 11b0;
+
+class Project {
+
+void func(int dave){
+Gidi := 11;
+Yossi(4,4);
+return 3+3;
+}
+
+}

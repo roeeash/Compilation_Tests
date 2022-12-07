@@ -65,7 +65,7 @@ static Scanner in = new Scanner(System.in);
 	}
 		
 	catch(Exception e){
-	System.out.println("Command"+command+" was unsuccessful");
+	System.out.println("Command "+command+" was unsuccessful");
 	
 	}
 	}
@@ -140,15 +140,19 @@ static Scanner in = new Scanner(System.in);
 
 
 	public static void main(String[]args){
+	//variables
+	int parsePassedCount = 0;
+	int otherPassedCount = 0;
+	int parseTests = 17;
+	int otherTests = 3;
+	int testNum = 20;
 
-	int parse_passed_count = 0;
-	int other_passed_count = 0;
 	try{
 	PrintWriter output_writer = new PrintWriter("../../Compilation_Tests/test_folder_proj2/most_recent_output.txt");
 	
 	
 
-	for(int i =1; i<=17; i++) {
+	for(int i =1; i<=testNum; i++) {
 
 
 	/** TRYING TEST1 **/
@@ -180,8 +184,8 @@ static Scanner in = new Scanner(System.in);
 		
 		if(diff == -1){
 			System.out.println("Files match");
-			if(i<=15) parse_passed_count++;
-			else other_passed_count++;
+			if(i<=parseTests) parsePassedCount++;
+			else otherPassedCount++;
 			System.out.println("Passed test " +i+"!");
 			output_writer.write("Passed test " +i+"!\n");
 		}
@@ -211,23 +215,25 @@ static Scanner in = new Scanner(System.in);
 
 
 
-	System.out.println("Passed tests for Parse Errors: "+parse_passed_count+ " out of 15");
-	output_writer.write("Passed tests for Parse Errors: "+parse_passed_count+ " out of 15\n");
+	System.out.println("Passed tests for Parse Errors: "+parsePassedCount+ " out of "+parseTests);
+	output_writer.write("Passed tests for Parse Errors: "+parsePassedCount+ " out of "+parseTests +"\n");
 
-	System.out.println("Passed tests for Other Errors: "+other_passed_count+ " out of 2");
-	output_writer.write("Passed tests for Other Errors: "+other_passed_count+ " out of 2\n");
+	System.out.println("Passed tests for Other Errors: "+otherPassedCount+ " out of "+otherTests);
+	output_writer.write("Passed tests for Other Errors: "+otherPassedCount+  " out of "+otherTests +"\n");
 
 	
 
-	if(parse_passed_count + other_passed_count == 17){
+	if(parsePassedCount + otherPassedCount == testNum){
 		System.out.println("Passed all the tests! Well done!");
 		output_writer.write("Passed all the tests! Well done!\n");
-	}
+
 
 
 	output_writer.flush();  
         output_writer.close();
 	}
+
+	}//close - try
 
 	catch (IOException e){
 	}
