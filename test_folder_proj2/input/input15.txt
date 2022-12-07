@@ -1,3 +1,13 @@
-//this is a comment 
-int a := 42; int c := 34652;
-/*a THIS IS A COMMENT Error  
+array GADI = int [];
+array AVI = Avi [];
+array AVI = int [];
+
+class Project {
+
+void func(int dave){
+Gidi := 5+-3;
+Yossi(4,4);
+return 3+3;
+}
+
+}
