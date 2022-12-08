@@ -20,6 +20,9 @@ Passed test 19!
 Passed test 20!
 Passed test 21!
 Passed test 22!
-Passed tests for Parse related issues: 19 out of 19
-Passed tests for Other issues: 3 out of 3
+Passed test 23!
+Passed test 24!
+Passed test 25!
+Passed tests for Parse related issues: 21 out of 21
+Passed tests for Other issues: 4 out of 4
 Passed all the tests! Well done!
