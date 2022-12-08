@@ -1,0 +1,13 @@
+array GADI = int [];
+array AVI = Avi [];
+array AVI = int [];
+
+class Project {
+
+void func(int dave){
+Gidi := "hello';
+Yossi(4,4);
+return 3+3;
+}
+
+}
