@@ -143,9 +143,9 @@ static Scanner in = new Scanner(System.in);
 	//variables
 	int parsePassedCount = 0;
 	int otherPassedCount = 0;
-	int parseTests = 32;
-	int otherTests = 4;
-	int testNum = 36;
+	int parseTests = 35;
+	int otherTests = 5;
+	int testNum = 40;
 
 	try{
 	PrintWriter output_writer = new PrintWriter("../../Compilation_Tests/test_folder_proj2/most_recent_output.txt");
@@ -226,12 +226,11 @@ static Scanner in = new Scanner(System.in);
 	if(parsePassedCount + otherPassedCount == testNum){
 		System.out.println("Passed all the tests! Well done!");
 		output_writer.write("Passed all the tests! Well done!\n");
-
-
+	
+	}
 
 	output_writer.flush();  
         output_writer.close();
-	}
 
 	}//close - try
 

@@ -1,3 +1,39 @@
-array AVI = int []; 
-/* THIS IS A COMMENT */
-//this is a comment and the following equal sign is not suppoed to be here = 
+array IntArray = int[];
+
+void BubbleSort(IntArray arr, int size)
+{
+    int i := 0;
+    int min := -32767;
+    int minIndex := -1;
+    
+    while (i < size)
+    {
+        int j := i+1;
+        while (j<size)
+        {
+            if (arr[j] < min)
+            {
+                int i := arr[minIndex];
+                arr[minIndex] := arr[j];
+                arr[j] := i;
+            }
+        }
+    }
+}
+
+void main()
+{
+    IntArray arr := new int[7];
+    
+    arr[0] := 34;
+    arr[1] := 12;
+    arr[2] := -600 id;
+    arr[3] := -400;
+    arr[4] := 70;
+    arr[5] := 30;
+    arr[6] := -580;
+    
+    PrintPrimes(2,100);
+}
+
+

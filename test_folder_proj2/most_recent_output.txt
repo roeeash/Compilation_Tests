@@ -34,6 +34,10 @@ Passed test 33!
 Passed test 34!
 Passed test 35!
 Passed test 36!
-Passed tests for Parse related issues: 32 out of 32
-Passed tests for Other issues: 4 out of 4
+Passed test 37!
+Passed test 38!
+Passed test 39!
+Passed test 40!
+Passed tests for Parse related issues: 35 out of 35
+Passed tests for Other issues: 5 out of 5
 Passed all the tests! Well done!
