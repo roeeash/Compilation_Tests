@@ -143,9 +143,9 @@ static Scanner in = new Scanner(System.in);
 	//variables
 	int parsePassedCount = 0;
 	int otherPassedCount = 0;
-	int parseTests = 28;
+	int parseTests = 32;
 	int otherTests = 4;
-	int testNum = 32;
+	int testNum = 36;
 
 	try{
 	PrintWriter output_writer = new PrintWriter("../../Compilation_Tests/test_folder_proj2/most_recent_output.txt");

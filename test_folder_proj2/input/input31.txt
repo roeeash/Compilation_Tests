@@ -1,13 +1,39 @@
-array GADI = int [];
-array AVI = Avi [];
-array AVI = int [];
+array IntArray = int[];
 
-class Project {
-
-void func(int dave){
-Gidi := "hello';
-Yossi(4,4);
-return 3+3;
+void BubbleSort(IntArray arr, int size)
+{
+    int i := 0;
+    int min := -32767;
+    int minIndex := -1;
+    
+    while (i < size)
+    {
+        int j := i+1;
+        while (j<size)
+        {
+            if (arr[j] < min < 1)
+            {
+                int i := arr[minIndex];
+                arr[minIndex] := arr[j];
+                arr[j] := i;
+            }
+        }
+    }
 }
 
+void main()
+{
+    IntArray arr := new int[7];
+    
+    arr[0] := 34;
+    arr[1] := 12;
+    arr[2] := -600;
+    arr[3] := -400;
+    arr[4] := 70;
+    arr[5] := 30;
+    arr[6] := -580;
+    
+    PrintPrimes(2,100);
 }
+
+
