@@ -30,7 +30,7 @@ To use tester for project 2 :
 
 3. Type cd test_folder_proj2, the press enter
 
-4. read https://www.github.com/roeeash/Compilation_Tests/blob/main/test_folder_proj2/README.txt for futher instructions.
+4. read https://www.github.com/roeeash/Compilation_Tests/blob/main/test_folder_proj3/README.txt for futher instructions.
 
 
 To use tester for project 2 :
