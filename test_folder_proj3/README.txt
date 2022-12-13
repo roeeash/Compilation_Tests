@@ -23,6 +23,10 @@ PAY ATTENTION: This tester file generates a new Makefile for testing purposes. p
 
 ![image](https://github.com/roeeash/Compilation_Tests/blob/main/images/close_image.png?raw=true)
 
+If an image of the symbol table opens, like so: 
+
+![image](https://github.com/roeeash/Compilation_Tests/blob/main/images/close_symbol_table.png?raw=true)
+
 Make sure to close it.
 
 6. After completeing the tester, an output file with your results will appear under Compilation_Tests/most_recent_output.txt, like so:
