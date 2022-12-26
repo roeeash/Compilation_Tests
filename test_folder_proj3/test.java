@@ -143,14 +143,14 @@ static Scanner in = new Scanner(System.in);
 	//variables
 	int semantPassedCount = 0;
 	int otherPassedCount = 0;
-	int semantTests = 1;
-	int otherTests = 2;
-	int testNum = 3;
+	int semantTests = 4;
+	int otherTests = 0;
+	int testNum = 4;
 
 	try{
 	PrintWriter output_writer = new PrintWriter("../../Compilation_Tests/test_folder_proj3/most_recent_output.txt");
-	test_generic("../../",false,"./input/Makefile.txt");
-	
+	runShellCommand("../../ex3/", "make");
+		
 
 	for(int i =1; i<=testNum; i++) {
 
@@ -171,7 +171,7 @@ static Scanner in = new Scanner(System.in);
 	
 	//run jar file
 
-	runShellCommand("../../ex3/", "make");
+	runShellCommand("../../ex3/", "make debug");
 	
 
 	//3. COMPARE TEST 1 
