@@ -1,244 +1,252 @@
-import java.io.*; 
-import java.util.*;
-import java.util.concurrent.TimeUnit;
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
 import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 
+public class test {
+    static Scanner in;
 
-
-public class test{
-
-
-static Scanner in = new Scanner(System.in);
-
-
-	// run commands in shell
-
-    public static void runCommand(File whereToRun, String command) throws Exception {
-        System.out.println("Running in: " + whereToRun);
-        System.out.println("Command: " + command);
-        String[] commands;
-
-        
-         commands = new String[] { "sh", "-c", command };
-        
-        
-        Process process =  Runtime.getRuntime().exec(commands, null, whereToRun);
-
-        OutputStream outputStream = process.getOutputStream();
-        InputStream inputStream = process.getInputStream();
-        InputStream errorStream = process.getErrorStream();
-
-        printStream(inputStream);
-        printStream(errorStream);
-
-        boolean isFinished = process.waitFor(30, TimeUnit.SECONDS);
-        outputStream.flush();
-        outputStream.close();
-
-        if(!isFinished) {
-            process.destroyForcibly();
-        }
+    public test() {
     }
 
-	//print the output stream
+    public static void runCommand(File var0, String var1) throws Exception {
+        System.out.println("Running in: " + var0);
+        System.out.println("Command: " + var1);
+        String[] var2 = new String[]{"sh", "-c", var1};
+        Process var3 = Runtime.getRuntime().exec(var2, (String[])null, var0);
+        OutputStream var4 = var3.getOutputStream();
+        InputStream var5 = var3.getInputStream();
+        InputStream var6 = var3.getErrorStream();
+        printStream(var5);
+        printStream(var6);
+        boolean var7 = var3.waitFor(30L, TimeUnit.SECONDS);
+        var4.flush();
+        var4.close();
+        if (!var7) {
+            var3.destroyForcibly();
+        }
 
-    private static void printStream(InputStream inputStream) throws IOException {
-        try(BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream))) {
-            String line;
-            while((line = bufferedReader.readLine()) != null) {
-                System.out.println(line);
+    }
+
+    private static void printStream(InputStream var0) throws IOException {
+        BufferedReader var1 = new BufferedReader(new InputStreamReader(var0));
+        Throwable var2 = null;
+
+        try {
+            String var3;
+            try {
+                while((var3 = var1.readLine()) != null) {
+                    System.out.println(var3);
+                }
+            } catch (Throwable var11) {
+                var2 = var11;
+                throw var11;
+            }
+        } finally {
+            if (var1 != null) {
+                if (var2 != null) {
+                    try {
+                        var1.close();
+                    } catch (Throwable var10) {
+                        var2.addSuppressed(var10);
+                    }
+                } else {
+                    var1.close();
+                }
+            }
+
+        }
+
+    }
+
+    public static void runShellCommand(String var0, String var1) {
+        try {
+            File var2 = new File(var0);
+            runCommand(var2, var1);
+        } catch (Exception var3) {
+            System.out.println("Command" + var1 + " was unsuccessful");
+        }
+
+    }
+
+    public static long filesCompareByLine(Path var0, Path var1) throws IOException {
+        BufferedReader var2 = Files.newBufferedReader(var0);
+        Throwable var3 = null;
+
+        try {
+            BufferedReader var4 = Files.newBufferedReader(var1);
+            Throwable var5 = null;
+
+            try {
+                long var6 = 1L;
+                String var8 = "";
+
+                long var10;
+                for(String var9 = ""; (var8 = var2.readLine()) != null; ++var6) {
+                    var9 = var4.readLine();
+                    if (var9 == null || !var8.equals(var9)) {
+                        var10 = var6;
+                        return var10;
+                    }
+                }
+
+                if (var4.readLine() == null) {
+                    var10 = -1L;
+                    return var10;
+                } else {
+                    var10 = var6;
+                    return var10;
+                }
+            } catch (Throwable var40) {
+                var5 = var40;
+                throw var40;
+            } finally {
+                if (var4 != null) {
+                    if (var5 != null) {
+                        try {
+                            var4.close();
+                        } catch (Throwable var39) {
+                            var5.addSuppressed(var39);
+                        }
+                    } else {
+                        var4.close();
+                    }
+                }
+
+            }
+        } catch (Throwable var42) {
+            var3 = var42;
+            throw var42;
+        } finally {
+            if (var2 != null) {
+                if (var3 != null) {
+                    try {
+                        var2.close();
+                    } catch (Throwable var38) {
+                        var3.addSuppressed(var38);
+                    }
+                } else {
+                    var2.close();
+                }
             }
 
         }
     }
 
 
-	//run make command
-	public static void runShellCommand(String path, String command){
-	try {
-		File f = new File(path);
-		runCommand(f,command);
-		
-	}
-		
-	catch(Exception e){
-	System.out.println("Command "+command+" was unsuccessful");
-	
-	}
-	}
+    public static void test_generic(String var0, String var1,String path) throws IOException {
+        String var2 = var0 + path;
+        FileReader var3 = new FileReader(var1);
+        PrintWriter var4 = new PrintWriter(var2);
+        var4.print("");
+        var4.flush();
 
-	// compare line by line 
+        String var5;
+        int var6;
+        for(var5 = ""; (var6 = var3.read()) != -1; var5 = var5 + (char)var6) {
+        }
 
-	public static long filesCompareByLine(Path path1, Path path2) throws IOException {
-    	try (BufferedReader bf1 = Files.newBufferedReader(path1);
-         BufferedReader bf2 = Files.newBufferedReader(path2)) {
-        
-        long lineNumber = 1;
-        String line1 = "", line2 = "";
-        while ((line1 = bf1.readLine()) != null) {
-            line2 = bf2.readLine();
-            if (line2 == null || !line1.equals(line2)) {
-                return lineNumber;
+        var4.write(var5);
+        var4.flush();
+        var4.close();
+    }
+
+    public static void main(String[] var0) {
+        int var1 = 0;
+        int var2 = 0;
+        int varE = 0;
+
+        try {
+            PrintWriter var3 = new PrintWriter("../../Compilation_Tests/test_folder_proj3/most_recent_output.txt");
+
+            for(int var4 = 0; var4 <= 63; ++var4) {
+                try {
+                    test_generic("../../", "./input/test" + var4 + ".txt","/ex3/input/Input.txt");
+                } catch (IOException var11) {
+                }
+
+                runShellCommand("../../ex3/", "make debug");
+
+                try {
+                    Path var5 = Paths.get("../../Compilation_Tests/test_folder_proj3/output/output" + var4 + ".txt");
+                    Path var6 = Paths.get("../../ex3/output/SemanticStatus.txt");
+                    FileReader var11 = new FileReader("../../ex3/output/SemanticStatus.txt");
+
+
+
+
+                    long var7 = filesCompareByLine(var5, var6);
+
+                    String var9;
+                    int var10;
+                    for(var9 = ""; (var10 = var11.read()) != -1; var9 = var9 + (char)var10) {
+                    }
+
+                    var3.write(var9);
+
+
+
+                    if (var7 == -1L) {
+                        System.out.println("Files match");
+                        if (var4 <= 20) {
+                            ++var1;
+                        } else if(var4 <= 37){
+                            ++var2;
+                        } else{
+                            ++varE;
+                        }
+
+                        System.out.println("\n$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ - Passed test " + var4 + "! $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\n");
+                        var3.write("Passed test " + var4 + "!\n");
+                    } else {
+                        System.out.println("\n######################## File " + var4 +" do not match, difference at line  " + var7 + " ###########################\n");
+                        var3.write("Files do not match, difference at line  " + var7 + " in test " + var4 + "!\n");
+                    }
+
+                } catch (IOException var10) {
+                    System.out.println("Could not compare files");
+                    var3.write("Could not compare files in test" + var4 + "\n");
+                }
+
+                try {
+                    TimeUnit.SECONDS.sleep(1L);
+                } catch (InterruptedException var9) {
+                }
             }
-            lineNumber++;
+
+            System.out.println("Passed OG tests: " + var1 + " out of 20");
+            var3.write("Passed OG: " + var1 + " out of 26\n");
+            System.out.println("Passed tests for OK: " + var2 + " out of 17");
+            var3.write("Passed tests for OK: " + var2 + " out of 17\n");
+            System.out.println("Passed tests for Errors: " + varE + " out of 26");
+            var3.write("Passed tests for Errors: " + varE + " out of 26\n");
+            if (var1 + var2 + varE == 63) {
+                System.out.println("Passed all the tests! Well done!");
+                var3.write("Passed all the tests! Well done!\n");
+            }
+
+            var3.flush();
+            var3.close();
+        } catch (IOException var12) {
         }
-        if (bf2.readLine() == null) {
-            return -1;
-        }
-        else {
-            return lineNumber;
-        }
+
+    }
+
+    static {
+        in = new Scanner(System.in);
     }
 }
-
-
-
-
-
-
-	/**** TESTS *****/
-
-
-	
-	/** GENERIC TEST FUNCTION **/ 
-	
-	
-	public static void test_generic(String parent_folder,boolean input, String input_file)  throws IOException{
-
-	String path_for_write = parent_folder+((input)?"/ex3/input/Input.txt" :"/ex3/Makefile") ;
-	FileReader fr = new FileReader(input_file);
-	PrintWriter writer = new PrintWriter(path_for_write);
-	writer.print("");
-	writer.flush();
- 	// whole content of file is to be stored
-            String str = "";
- 
-            int i;
- 
-           
-            while ((i = fr.read()) != -1) {
- 
-                str += (char)i;
-            }
- 
- 
-            // Writing above string data to
-            // FileWriter object
-	writer.write(str);                                                   
-                         writer.flush();  
-        writer.close();
-	}
-
-	
-
-	
-	
-
-
-
-	public static void main(String[]args){
-	//variables
-	int semantPassedCount = 0;
-	int otherPassedCount = 0;
-	int semantTests = 5;
-	int otherTests = 0;
-	int testNum = 5;
-
-	try{
-	PrintWriter output_writer = new PrintWriter("../../Compilation_Tests/test_folder_proj3/most_recent_output.txt");
-	runShellCommand("../../ex3/", "make");
-		
-
-	for(int i =1; i<=testNum; i++) {
-
-
-	/** TRYING TEST1 **/
-	//1.TEST
-	try {
-		test_generic("../../",true,"./input/input"+i+".txt");
-	
-	}
-
-	catch (IOException e){
-	}
-
-	//2. RUN MAKE COMMAND
-
-	
-	
-	//run jar file
-
-	runShellCommand("../../ex3/", "make debug");
-	
-
-	//3. COMPARE TEST 1 
-
-	try {
-		
-		Path path1 = Paths.get("../../Compilation_Tests/test_folder_proj3/output/output"+i+".txt");
-		Path path2 = Paths.get("../../ex3/output/SemanticStatus.txt");
-		long diff = filesCompareByLine(path1,path2);
-		
-		if(diff == -1){
-			System.out.println("Files match");
-			if(i<=semantTests) semantPassedCount++;
-			else otherPassedCount++;
-			System.out.println("Passed test " +i+"!");
-			output_writer.write("Passed test " +i+"!\n");
-		}
-		else{
-			System.out.println("Files do not match, difference at line  "+diff);
-			output_writer.write("Files do not match, difference at line  "+diff+" in test " +i+"!\n");
-		}	
-	
-	}
-
-	catch (IOException e){
-		System.out.println("Could not compare files");
-		output_writer.write("Could not compare files in test" + i+"\n");
-	}
-
-	/** Sleep**/
-
-	try{
-
-	TimeUnit.SECONDS.sleep(1);
-	}
-	
-	catch(InterruptedException e){
-	}
-
-	}//end for
-
-
-
-	System.out.println("Passed tests for Semantic related issues: "+semantPassedCount+ " out of "+semantTests);
-	output_writer.write("Passed tests for Semantic related issues: "+semantPassedCount+ " out of "+semantTests +"\n");
-
-	System.out.println("Passed tests for Other issues: "+otherPassedCount+ " out of "+otherTests);
-	output_writer.write("Passed tests for Other issues: "+otherPassedCount+  " out of "+otherTests +"\n");
-
-	
-
-	if(semantPassedCount + otherPassedCount == testNum){
-		System.out.println("Passed all the tests! Well done!");
-		output_writer.write("Passed all the tests! Well done!\n");
-	
-	}
-
-	output_writer.flush();  
-        output_writer.close();
-
-	}//close - try
-
-	catch (IOException e){
-	}
-
-	
-	
-	}// end- main
-
-}//end- class

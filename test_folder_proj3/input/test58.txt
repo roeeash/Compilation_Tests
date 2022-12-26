@@ -1,0 +1,5 @@
+class illaySucks
+{
+    int constantAssignment := 5;
+    int NotAConstantAssignment := constantAssignment;
+}

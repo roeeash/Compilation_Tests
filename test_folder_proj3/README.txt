@@ -9,7 +9,7 @@ To run the tester on Nova:
 
 To use this file:
 
-1. enter the test_folder_proj3 folder. Open a new Terminal window.
+1. enter the test_folder_proj2 folder. Open a new Terminal window.
 
 2. In it, write "javac test.java", and press enter
 
@@ -17,15 +17,9 @@ To use this file:
 
 4. The tester will automatically run withouht you having to do anything! Sit back, relax and watch it work. Good Luck!
 
-PAY ATTENTION: This tester file generates a new Makefile for testing purposes. please make sure to change it back before you submit your project!
-
 5. If an image opens, like so: 
 
 ![image](https://github.com/roeeash/Compilation_Tests/blob/main/images/close_image.png?raw=true)
-
-If an image of the symbol table opens, like so: 
-
-![image](https://github.com/roeeash/Compilation_Tests/blob/main/images/close_symbol_table.png?raw=true)
 
 Make sure to close it.
 

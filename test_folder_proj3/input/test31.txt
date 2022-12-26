@@ -1,0 +1,3 @@
+string rotem1;
+string rotem2 := "HankSchrader";
+int i := rotem1 = rotem2;

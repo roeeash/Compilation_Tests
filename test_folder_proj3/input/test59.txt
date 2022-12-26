@@ -1,0 +1,7 @@
+array eladIsOK = int[];
+
+void main()
+{
+	eladIsOK isHe := new int[0];
+
+}
