@@ -8,7 +8,7 @@ int c;
 }
 
 int func(){
-	if(shalom){
+	while(shalom){
 		return 1;	
 	}
 		return 3;

@@ -9,4 +9,7 @@ int c;
 
 }
 
+class Man{
+int d;
+}
 

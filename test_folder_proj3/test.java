@@ -143,9 +143,9 @@ static Scanner in = new Scanner(System.in);
 	//variables
 	int semantPassedCount = 0;
 	int otherPassedCount = 0;
-	int semantTests = 4;
+	int semantTests = 5;
 	int otherTests = 0;
-	int testNum = 4;
+	int testNum = 5;
 
 	try{
 	PrintWriter output_writer = new PrintWriter("../../Compilation_Tests/test_folder_proj3/most_recent_output.txt");

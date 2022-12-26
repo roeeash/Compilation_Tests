@@ -2,6 +2,7 @@ Passed test 1!
 Passed test 2!
 Passed test 3!
 Passed test 4!
-Passed tests for Semantic related issues: 4 out of 4
+Passed test 5!
+Passed tests for Semantic related issues: 5 out of 5
 Passed tests for Other issues: 0 out of 0
 Passed all the tests! Well done!
