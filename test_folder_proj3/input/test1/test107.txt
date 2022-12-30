@@ -1,0 +1,5 @@
+class TestClass { 
+void method() { int a; }
+void method() { int a;}
+/*Checking if a class can define a method with the same name as a previously defined method   Semantic error on line 3 illegal to define a method with the same name as a previously defined method*/
+}

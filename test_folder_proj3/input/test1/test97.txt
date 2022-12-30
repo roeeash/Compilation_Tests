@@ -1,0 +1,6 @@
+ int a(int b) {
+ //  Check invalid method call due to incorrect argument types
+    return b;
+}
+string c := "hello";
+ int d := a(c);

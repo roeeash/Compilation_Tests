@@ -1,0 +1,4 @@
+int a(int b){ // Check invalid method call due to incorrect number of arguments
+return b; 
+}
+int c := a();

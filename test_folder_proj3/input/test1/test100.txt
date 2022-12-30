@@ -1,0 +1,3 @@
+class TestClass2 extends TestClass {}
+/*  Checking if a class can extend a class that is defined after it Semantic error on line 1 TestClass not defined */
+class TestClass {}

@@ -1,0 +1,14 @@
+class A {
+int x;
+void foo() {
+int y := x + 1;
+}
+}
+class B extends A {
+void foo() {
+int y := x + "hello";
+}
+/*Semantic error at line 9 Invalid type for operator
+
+This test case is checking for invalid use of the  operator in an overridden method*/
+}

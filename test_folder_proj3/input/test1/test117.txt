@@ -1,0 +1,15 @@
+int x := 5;
+string s := "hello";
+class A {
+int xx;
+string ss;
+}
+class G {
+int xxx;
+string sss;
+void foo() {
+int yyy := xxx + 1;
+yyy := x - 2;
+}
+/*This test case is checking the ability to define a method in a class and use a data member within the method.*/
+}

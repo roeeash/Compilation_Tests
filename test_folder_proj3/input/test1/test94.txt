@@ -1,0 +1,2 @@
+int a() { return b(); } //  Check invalid method definition due to referencing a method before it is defined
+int b() { return 1; }

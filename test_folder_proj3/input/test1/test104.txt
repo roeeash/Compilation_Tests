@@ -1,0 +1,4 @@
+class TestClass {
+void method(int x) { int a;}
+void method(string y) { int a;}
+}

@@ -1,0 +1,7 @@
+class Test {// Invalid program on line 5 Hello is not of type int
+  int x;
+  void TestMethod() {
+    Test t;
+    t.x := "Hello";
+  }
+}

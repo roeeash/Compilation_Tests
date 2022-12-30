@@ -1,0 +1,5 @@
+class A {// error line 3 - Check invalid class definition due to referencing a method before it is defined
+int a;
+int b() { return c(); }
+int c() { return 1; }
+}

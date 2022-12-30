@@ -1,0 +1,22 @@
+class Gigi {
+int f:= 7;}
+class Gigi1 {
+int f:= 7;}
+class Gigi2 {
+int f:= 7;}
+class Gigi3 {
+int f:= 7;}
+class Gigi4 {
+int f:= 7;}
+class Gigi5 {
+int f:= 7;}
+class Gigi6 {
+int f:= 7;}
+class Father extends Gigi4{
+        int foo() { return 8;}
+}
+class Son extends Father {
+        void foo1() { PrintInt(8); }
+}
+class Gigi19 extends Gigi2{
+int fifo:= 7;}

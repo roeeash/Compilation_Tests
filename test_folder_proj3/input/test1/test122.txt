@@ -1,0 +1,13 @@
+class A {
+int x;
+void foo() {
+int y := x + 1;
+int fi := x -1;
+int gg := x*23;
+}
+}
+class B extends A {
+void bar() {
+int z := y + 1;
+}
+}

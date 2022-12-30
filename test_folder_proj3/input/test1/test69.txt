@@ -1,0 +1,10 @@
+class Gigi extends Son{
+	int g := 0;
+}
+// fail because Gigi extends undefined class son
+class Father extends Gigi{
+        int foo() { return 8; }
+   }
+class Son extends Father {
+        void foo1() { PrintInt(8); }
+}

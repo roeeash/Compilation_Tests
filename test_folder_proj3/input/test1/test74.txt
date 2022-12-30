@@ -1,0 +1,8 @@
+class Father {
+        int foo() { return fifo(); }
+	
+   }
+// error because fifo is undefined
+class Son extends Father {
+        int fifo() { return 4; }
+}

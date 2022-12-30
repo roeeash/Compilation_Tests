@@ -1,0 +1,4 @@
+ int a; 
+string b; 
+a := b;
+// Check invalid assignment due to different types

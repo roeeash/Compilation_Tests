@@ -1,0 +1,2 @@
+array A = fakeType[];
+//  Check invalid array definition due to referencing a non-existent type

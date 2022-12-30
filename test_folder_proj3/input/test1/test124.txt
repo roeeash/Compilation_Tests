@@ -1,0 +1,4 @@
+int x;
+void TestMethod() {
+  x := 5;
+}

@@ -1,0 +1,5 @@
+class IllegalSameName {
+	int foo(int i){ return 1;}
+        void foo(int i) { PrintInt(i); }
+// illegal overiding
+}

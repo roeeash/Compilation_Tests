@@ -1,0 +1,4 @@
+class TestClass
+{
+void foo() { PrintInt(8); }
+}

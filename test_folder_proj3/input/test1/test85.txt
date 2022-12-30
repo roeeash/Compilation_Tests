@@ -1,0 +1,6 @@
+class A { 
+int a; 
+int b() { return c; } 
+int c; 
+}
+// error line 3 -  Check invalid class definition due to referencing a variable before it is defined

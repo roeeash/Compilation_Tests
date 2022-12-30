@@ -1,0 +1,8 @@
+class Father { int a; }
+class Son extends Father { int a; }
+void main() { 
+Father f; 
+Son s; 
+f := s;
+/*Checking if an expression of type Father can be used in a place that allows an expression of type Son*/
+}

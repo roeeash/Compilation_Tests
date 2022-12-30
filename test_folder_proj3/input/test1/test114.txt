@@ -1,0 +1,6 @@
+int x := foo();
+void foo() {
+
+ x := 5;
+
+}

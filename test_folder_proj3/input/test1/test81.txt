@@ -1,0 +1,11 @@
+class F {
+	int foo(int i){return 8;}
+} 
+
+class IllegalSameName extends F
+{
+        int foo(int i) { return i; }
+	int foo;
+// fails because in class illegal theres foo twice.
+
+}

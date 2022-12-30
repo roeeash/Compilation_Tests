@@ -1,0 +1,6 @@
+class UseBeforeDef
+{
+    string foo() { return i; }
+    string i := "bye"; 
+// error because use i before its defined
+}

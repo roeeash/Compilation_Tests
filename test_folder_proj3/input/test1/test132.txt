@@ -1,0 +1,4 @@
+int x;// Invalid program on line 3 Hello is not of type int
+void TestMethod() {
+  x := "Hello";
+}

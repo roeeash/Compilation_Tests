@@ -1,0 +1,4 @@
+class TestClass { // Checking if a class can define a method that refers to a data member defined after it
+int data;
+void method() { data := 1; }
+ }

@@ -1,0 +1,10 @@
+class Test { // Invalid program on line 5 TestMethod2 is not a member of class Test
+  int x;
+  void TestMethod() {
+    Test t;
+    t.TestMethod2();
+  }
+  void TestMethod3() {
+    x := 5;
+  }
+}

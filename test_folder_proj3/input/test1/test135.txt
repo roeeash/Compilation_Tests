@@ -1,0 +1,14 @@
+class Father {
+	int Daniel;
+	string bobi;
+	void George;
+        int foo() { return 8; }
+   }
+void Animal {
+	string name;	
+}
+// failing because of void class.
+   class Son extends Father
+   {
+        void foo1() { return; }
+}

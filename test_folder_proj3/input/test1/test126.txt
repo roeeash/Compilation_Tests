@@ -1,0 +1,4 @@
+int x;// Invalid program on line 3 y is not defined
+void TestMethod() {
+  y := 5;
+}

@@ -1,0 +1,5 @@
+class TestClass {
+int data;
+int data;
+/*Checking if a class can define a variable with the same name as a previously defined variable  Semantic error on line 3 illegal to define a variable with the same name as a previously defined variable*/
+}

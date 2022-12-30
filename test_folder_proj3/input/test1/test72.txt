@@ -1,0 +1,7 @@
+class int {
+        int foo() { return 8; }
+   }
+// error because of define int class
+class Son extends int {
+        void foo1() { PrintInt(8); }
+}

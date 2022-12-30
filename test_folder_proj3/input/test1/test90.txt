@@ -1,0 +1,8 @@
+class A { int a; } 
+class B extends A { int b; } 
+A a;
+B b;
+// Check valid assignment of derived class to base class variable
+void main(){
+    a := b;
+}

@@ -1,0 +1,13 @@
+array A = int[];
+array B = string[];
+
+void main(){
+
+    A[0] := 5;
+/*Valid semantic program
+
+This test case is checking the ability to define and assign values to arrays of different types*/
+    B[0] := "hello";
+
+
+}

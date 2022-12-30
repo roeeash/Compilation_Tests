@@ -1,4 +1,3 @@
-//
 // Source code recreated from a .class file by IntelliJ IDEA
 // (powered by FernFlower decompiler)
 //
@@ -17,10 +16,10 @@ import java.nio.file.Paths;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
-public class test {
+public class test1 {
     static Scanner in;
 
-    public test() {
+    public test1() {
     }
 
     public static void runCommand(File var0, String var1) throws Exception {
@@ -41,6 +40,7 @@ public class test {
         }
 
     }
+
 
     private static void printStream(InputStream var0) throws IOException {
         BufferedReader var1 = new BufferedReader(new InputStreamReader(var0));
@@ -170,21 +170,38 @@ public class test {
         int var2 = 0;
         int varE = 0;
 
-        try {
-            PrintWriter var3 = new PrintWriter("../../Compilation_Tests/test_folder_proj3/most_recent_output.txt");
+        int lbound = 1;
+        int rbound = 135;
 
-            for(int var4 = 0; var4 <= 63; ++var4) {
+        if(var0 != null && var0.length >= 2){
+            try{
+                lbound =  Integer.parseInt(var0[0]);
+                rbound = Integer.parseInt(var0[1]);
+            }
+            catch (Exception e){
+                System.out.println("Error!! Not valid input.");
+                return;
+            }
+        }
+
+
+        try {
+            PrintWriter var3 = new PrintWriter("../../Compilation_Tests/test_folder_proj3/most_recent_output/most_recent_output (" + lbound + "," + rbound+ ").txt");
+
+            for(int var4 = lbound; var4 <= rbound; ++var4) {
                 try {
-                    test_generic("../../", "./input/test" + var4 + ".txt","/ex3/input/Input.txt");
+                    test_generic("../../", "./input/test1/test" + var4 + ".txt","/ex3/input/Input.txt");
                 } catch (IOException var11) {
                 }
 
                 runShellCommand("../../ex3/", "make debug");
 
                 try {
-                    Path var5 = Paths.get("../../Compilation_Tests/test_folder_proj3/output/output" + var4 + ".txt");
+                    Path var5 = Paths.get("../../Compilation_Tests/test_folder_proj3/output/output1/output" + var4 + ".txt");
                     Path var6 = Paths.get("../../ex3/output/SemanticStatus.txt");
                     FileReader var11 = new FileReader("../../ex3/output/SemanticStatus.txt");
+                    FileReader var12 = new FileReader("../../Compilation_Tests/test_folder_proj3/output/output1/output" + var4 + ".txt");
+
 
 
 
@@ -196,21 +213,19 @@ public class test {
                     for(var9 = ""; (var10 = var11.read()) != -1; var9 = var9 + (char)var10) {
                     }
 
-                    var3.write(var9);
+
+                    var3.write(var9 + " - ");
+                    for(var9 = ""; (var10 = var12.read()) != -1; var9 = var9 + (char)var10) {
+                    }
+                    var3.write(var9 + "  ");
 
 
 
                     if (var7 == -1L) {
                         System.out.println("Files match");
-                        if (var4 <= 20) {
-                            ++var1;
-                        } else if(var4 <= 37){
-                            ++var2;
-                        } else{
-                            ++varE;
-                        }
+                        ++var1;
 
-                        System.out.println("\n$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ - Passed test " + var4 + "! $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\n");
+                        System.out.println("\n$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ - Passed test " + var4 + "! $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ \n\n");
                         var3.write("Passed test " + var4 + "!\n");
                     } else {
                         System.out.println("\n######################## File " + var4 +" do not match, difference at line  " + var7 + " ###########################\n");
@@ -228,13 +243,8 @@ public class test {
                 }
             }
 
-            System.out.println("Passed OG tests: " + var1 + " out of 20");
-            var3.write("Passed OG: " + var1 + " out of 26\n");
-            System.out.println("Passed tests for OK: " + var2 + " out of 17");
-            var3.write("Passed tests for OK: " + var2 + " out of 17\n");
-            System.out.println("Passed tests for Errors: " + varE + " out of 26");
-            var3.write("Passed tests for Errors: " + varE + " out of 26\n");
-            if (var1 + var2 + varE == 63) {
+            System.out.println("Passed: " + var1 + " out of "+( rbound-lbound+1)+" tests");
+            if (var1 == (rbound-lbound+1)) {
                 System.out.println("Passed all the tests! Well done!");
                 var3.write("Passed all the tests! Well done!\n");
             }

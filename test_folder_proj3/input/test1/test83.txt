@@ -1,0 +1,3 @@
+class A { int a; } 
+class A { int b; }
+//  Check invalid class definition due to shadowing - error line 2

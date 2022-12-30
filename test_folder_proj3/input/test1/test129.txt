@@ -1,0 +1,10 @@
+class Test {
+  int x;
+  void TestMethod() {
+    Test t;
+    t.x := 5;
+  }
+  void TestMethod2() {
+    x := 5;
+  }
+}

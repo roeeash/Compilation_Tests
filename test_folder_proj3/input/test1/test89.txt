@@ -1,0 +1,1 @@
+array A = void[]; //  Check invalid array definition due to using void as the array type

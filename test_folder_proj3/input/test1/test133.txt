@@ -1,0 +1,7 @@
+class Father {
+        int foo() { return 8; }
+   }
+// error because of overloading
+class Son extends Father {
+        void foo() { PrintInt(8); }
+}

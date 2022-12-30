@@ -1,0 +1,7 @@
+class TestClass {
+void main() {
+TestClass t;
+ t := nil;
+}
+} // Checking if an expression of type class can be replaced with nil
+

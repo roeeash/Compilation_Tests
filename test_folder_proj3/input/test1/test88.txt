@@ -1,0 +1,3 @@
+array A = int[];
+array B = A[];
+// Check valid integer matrix definition

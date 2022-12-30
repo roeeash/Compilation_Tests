@@ -1,0 +1,7 @@
+class string {
+        int foo() { return 8; }
+   }
+// error because of define string class
+class Son extends string {
+        void foo1() { PrintInt(8); }
+}

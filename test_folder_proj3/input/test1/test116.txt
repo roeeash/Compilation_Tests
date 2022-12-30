@@ -1,0 +1,9 @@
+class A {
+int x;
+string y;
+int bar() { return 0; }
+}
+class B extends A {
+int z;
+void baz() { return y; }
+}

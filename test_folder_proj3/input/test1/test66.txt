@@ -1,0 +1,10 @@
+class A{
+    void foo(int A){
+        int j;
+    }
+}
+class B extends A{
+    void foo(string A){
+            int j;
+        }
+}

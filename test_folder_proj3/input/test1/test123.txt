@@ -1,0 +1,7 @@
+class Test {
+  int x;
+  void TestMethod() {
+    Test t;
+    t.x := 5;
+  }
+}

@@ -1,0 +1,8 @@
+class Test {
+  int x;
+  void TestMethod() {
+    Test t;
+    t.y := 5;
+  }
+/*Invalid program on line 5 y is not a member of class Test*/
+}

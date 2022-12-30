@@ -1,0 +1,23 @@
+class Father {
+        int foo() { return 8; }
+   }
+// error because gig3 defined after gigi2
+class Son extends Father {
+        void foo12() { PrintInt(8); }
+}
+class Gigi extends Son {
+        void foo1() { PrintInt(8); }
+}
+class Gigi1 extends Gigi {
+        void foo32() { PrintInt(8); }
+}
+class Gigi2 extends Gigi1 {
+        void foo321() { PrintInt(8); }
+	Son s;
+	Father f;
+	Gigi1 y;
+	Gigi3 x;
+}
+class Gigi3 extends Gigi2 {
+        void foo32() { PrintInt(8); }
+}

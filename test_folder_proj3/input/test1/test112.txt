@@ -1,0 +1,18 @@
+class Father {
+int a;
+string b;
+Father c;
+void foo() { int a;}
+void bar() { int b;}
+}
+
+class Son extends Father {
+int a;
+string b;
+Father c;
+void foo() { int a;}
+void bar() { foo(); }
+void foo(int x) {bar(); }
+void bar() { foo(a); }
+}
+

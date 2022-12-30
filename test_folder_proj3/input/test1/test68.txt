@@ -1,0 +1,10 @@
+class A{
+    int j;
+}
+class B extends A{
+    string k;
+}
+array aba = A [];
+void foo(){
+    aba := new B[2];
+}

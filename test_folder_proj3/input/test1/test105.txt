@@ -1,0 +1,6 @@
+class TestClass { 
+void method() { int a;} }
+class TestClass2 extends TestClass { 
+void method() { int a;}
+/*Checking if a method in a derived class can override a method in its base class  */
+}

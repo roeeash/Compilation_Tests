@@ -1,0 +1,6 @@
+class UseBeforeDef
+{
+    void foo() { PrintInt(i); }
+	int i; 
+// error because use i before its defined
+}

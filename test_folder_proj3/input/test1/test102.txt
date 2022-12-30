@@ -1,0 +1,9 @@
+class TestClass { 
+void method() { method2(); } 
+void method2() {
+    int k;
+}
+/* Checking if a class can define a method that refers to another method defined after it - Semantic error on line 2 method2 not defined
+
+*/
+}
