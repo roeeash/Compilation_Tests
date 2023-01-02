@@ -1,0 +1,3 @@
+array intArray = new int[];
+array mat = intArray[];
+mat A := new intArray[4];
