@@ -1,0 +1,11 @@
+ERROR(2) - ERROR(2)
+  Passed test 1!
+ERROR(2) - ERROR(2)
+  Passed test 2!
+ERROR(2) - ERROR(2)
+  Passed test 3!
+OK - OK
+  Passed test 4!
+OK - OK
+  Passed test 5!
+Passed all the tests! Well done!

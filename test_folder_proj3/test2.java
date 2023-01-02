@@ -180,6 +180,7 @@ public class test2 {
 
         try {
             PrintWriter var3 = new PrintWriter("../../Compilation_Tests/test_folder_proj3/most_recent_output/most_recent_output (" + lbound + "," + rbound+ ").txt");
+	    test_generic("../../", "./input/test2/Makefile.txt","/ex3/Makefile");
 
             for(int var4 = lbound; var4 <= rbound; ++var4) {
                 try {
